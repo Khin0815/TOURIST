@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Union | Surf Capital of the Northern Philippines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="project.css">
+</head>
+<style>
+    /* ----- RESET & SUNSET VIBES VARIABLES ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Fonts */
+    --primary-font: 'Montserrat', sans-serif;
+    --body-font: 'Poppins', sans-serif;
+    
+    /* 🌅 SUNSET VIBES COLOR PALETTE 🌊 */
+    --sunset-orange: #FF6B35;
+    --sunset-coral: #F4A261;
+    --sunset-gold: #E9C46A;
+    --sunset-pink: #E76F51;
+    --sunset-glow: #FFB347;
+    
+    /* Ocean Waters */
+    --ocean-deep: #0B3B4F;
+    --ocean-wave: #1A6B7A;
+    --ocean-shallow: #4AA3B0;
+    --ocean-foam: #8DC9D4;
+    --ocean-mist: #C4E4EA;
+    
+    /* Sand & Beach */
+    --sand-light: #FDF8F0;
+    --sand-warm: #F5E6CC;
+    --sand-deep: #E8D5B5;
+    
+    /* Terracotta Accents */
+    --terracotta: #C1612E;
+    --terracotta-dark: #9B451D;
+    
+    /* Text Colors */
+    --text-dark: #1E2A2E;
+    --text-light: #5A6B6F;
+    --text-white: #FFFFFF;
+    
+    /* Gradients */
+    --sidebar-gradient: linear-gradient(160deg, #0B3B4F 0%, #1A6B7A 100%);
+    --hero-gradient: linear-gradient(135deg, rgba(255, 107, 53, 0.75), rgba(26, 107, 122, 0.65));
+    --sunset-gradient: linear-gradient(145deg, #FF6B35, #F4A261, #E9C46A);
+    --ocean-gradient: linear-gradient(145deg, #0B3B4F, #1A6B7A, #4AA3B0);
+    
+    /* Sizes & Effects */
+    --sidebar-width: 260px;
+    --transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    --shadow-sm: 0 5px 20px rgba(0,0,0,0.08);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.12);
+    --shadow-lg: 0 20px 40px -12px rgba(0,0,0,0.2);
+    --border-radius-lg: 48px;
+    --border-radius-md: 32px;
+    --border-radius-sm: 24px;
+}
+
+/* --- BODY & BACKGROUND --- */
+body {
+    font-family: var(--body-font);
+    background: linear-gradient(135deg, var(--sand-light) 0%, var(--sand-warm) 100%);
+    color: var(--text-dark);
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* --- SIDEBAR - DESKTOP VERSION --- */
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--sidebar-gradient);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 45px 25px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    transition: var(--transition);
+    box-shadow: 6px 0 25px rgba(0,0,0,0.12);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+.real-img { 
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--sunset-gold);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+}
+
+.real-img:hover {
+    transform: scale(1.03);
+    border-color: var(--sunset-orange);
+}
+
+.logo-text {
+    color: var(--text-white);
+    margin-top: 12px;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    font-family: var(--primary-font);
+    font-weight: 800;
+    background: var(--sunset-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.sidebar nav a {
+    color: var(--ocean-mist);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 18px;
+    border-radius: 50px;
+    transition: var(--transition);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(2px);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar nav a:hover {
+    background: var(--sunset-orange);
+    color: white;
+    transform: translateX(8px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* HAMBURGER MENU BUTTON - HIDDEN ON DESKTOP */
+.menu-toggle {
+    display: none;
+}
+
+/* --- MAIN CONTENT (DESKTOP) --- */
+main {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    padding: 20px 40px;
+    background: none;
+}
+
+section {
+    min-height: 85vh;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-margin-top: 20px;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    background: var(--hero-gradient), url('LAUNION.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    border-radius: var(--border-radius-lg);
+    padding: 90px 65px;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to top, rgba(11, 59, 79, 0.4), transparent);
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
+    font-weight: 800;
+    font-family: var(--primary-font);
+    color: white;
+    text-shadow: 2px 4px 15px rgba(0,0,0,0.4);
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    max-width: 750px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--sand-light);
+    font-weight: 500;
+    max-width: 550px;
+    text-shadow: 1px 2px 8px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- BUTTONS --- */
+.explore-btn {
+    font-size: 0.9rem;
+    background: var(--sunset-orange);
+    color: white;
+    padding: 14px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    width: fit-content;
+    transition: var(--transition);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+.explore-btn:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.btn-small {
+    background: var(--sunset-orange);
+    border: none;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: white;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--primary-font);
+}
+
+.btn-small:hover {
+    background: var(--terracotta-dark);
+    transform: translateY(-2px);
+}
+
+/* --- SECTION TITLES --- */
+.section-title {
+    font-size: 2.3rem;
+    font-family: var(--primary-font);
+    text-align: center;
+    margin-bottom: 2.8rem;
+    color: var(--ocean-deep);
+    font-weight: 800;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--sunset-gradient);
+    margin: 1rem auto 0;
+    border-radius: 4px;
+}
+
+/* --- HOVER GALLERY (Beaches) --- */
+.slides {
+    display: flex;
+    width: 100%;
+    height: 480px;
+    gap: 18px;
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+.slides li, .slide {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    background: var(--sand-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.slides li:hover, .slide:hover { 
+    flex: 4.5; 
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 25px;
+    background: linear-gradient(transparent, rgba(11, 59, 79, 0.9));
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.slides li:hover .content { 
+    opacity: 1; 
+}
+
+.content h3 {
+    font-size: 1.4rem;
+    font-family: var(--primary-font);
+    margin-bottom: 5px;
+}
+
+.content p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* --- STORY SECTION --- */
+.story-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.story-hero {
+    background: linear-gradient(135deg, rgba(11, 59, 79, 0.92), rgba(255, 107, 53, 0.85)), url('https://images.unsplash.com/photo-1589330273594-fade1ee91647?q=80&w=2070&auto=format');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: var(--border-radius-lg);
+    padding: 4rem 3rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: white;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.story-hero::before {
+    content: '🏄‍♂️';
+    position: absolute;
+    font-size: 8rem;
+    opacity: 0.08;
+    bottom: -20px;
+    right: -20px;
+    pointer-events: none;
+}
+
+.story-hero::after {
+    content: '🌊';
+    position: absolute;
+    font-size: 6rem;
+    opacity: 0.08;
+    top: -20px;
+    left: -20px;
+    pointer-events: none;
+}
+
+.story-hero h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: var(--primary-font);
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.story-hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.story-card {
+    background: white;
+    border-radius: var(--border-radius-md);
+    padding: 2rem 1.8rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    border-bottom: 4px solid var(--sunset-orange);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.story-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--sunset-gradient);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.story-card:hover::before {
+    opacity: 1;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-bottom-color: var(--ocean-wave);
+}
+
+.story-card .card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    display: inline-block;
+}
+
+.story-card h3 {
+    color: var(--ocean-deep);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: var(--primary-font);
+    position: relative;
+    display: inline-block;
+}
+
+.story-card h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--sunset-orange);
+    margin: 0.6rem auto 0;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.story-card:hover h3::after {
+    width: 60px;
+}
+
+.story-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.info-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--sunset-gradient);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    color: white;
+    transition: var(--transition);
+}
+
+.story-card:hover .info-badge {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.year-badge {
+    display: inline-block;
+    background: rgba(11, 59, 79, 0.1);
+    color: var(--ocean-deep);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+/* --- GALLERY CARDS --- */
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+    justify-content: center;
+}
+
+.gallery-card {
+    flex: 1 1 230px;
+    background: white;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    min-width: 190px;
+}
+
+.gallery-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.img-holder {
+    height: 210px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .img-holder {
+    transform: scale(1.05);
+}
+
+.gallery-card h3 {
+    background: white;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--terracotta);
+    transition: var(--transition);
+}
+
+.gallery-card:hover h3 {
+    background: var(--sunset-orange);
+    color: white;
+}
+
+.gallery-card .desc {
+    padding: 0 1rem 1.2rem 1rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* --- MAP SECTION --- */
+.map-container {
+    background: linear-gradient(135deg, var(--sand-deep), var(--sand-warm));
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.interactive-map-card {
+    background: var(--ocean-gradient);
+    border-radius: var(--border-radius-md);
+    padding: 3rem 2rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.1), var(--shadow-sm);
+    background-image: radial-gradient(circle at 10% 30%, rgba(255,215,150,0.15) 1px, transparent 1px);
+    background-size: 22px 22px;
+}
+
+.interactive-map-card:hover {
+    transform: scale(0.98);
+    background: var(--ocean-deep);
+}
+
+/* --- INQUIRE & CONTACT --- */
+.inquire-card, .contact-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    padding: 2.8rem;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid var(--sunset-gold);
+}
+
+.inquire-card:hover, .contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* --- DIVIDER --- */
+.divider {
+    margin: 2rem auto;
+    width: 70%;
+    height: 2px;
+    background: radial-gradient(circle, var(--sunset-orange), transparent);
+    border: 0;
+}
+
+/* --- FOOTER --- */
+.footer-tag {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    background: var(--sidebar-gradient);
+    color: var(--ocean-mist);
+    margin-top: 2rem;
+    border-radius: var(--border-radius-md);
+    margin-bottom: 20px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        left: 0 !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+    
+    .menu-toggle, .overlay {
+        display: none !important;
+    }
+    
+    .logo-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+    
+    .real-img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .logo-text {
+        font-size: 1rem;
+        margin-top: 0;
+        letter-spacing: 2px;
+        color: white;
+        background: none;
+        -webkit-background-clip: unset;
+        background-clip: unset;
+    }
+    
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 0;
+        width: auto;
+    }
+    
+    .sidebar nav a {
+        font-size: 0.65rem;
+        padding: 5px 10px;
+        background: rgba(255,255,255,0.15);
+    }
+    
+    main {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+    
+    section {
+        padding: 20px 15px;
+        min-height: auto;
+    }
+    
+    .hero {
+        padding: 40px 25px;
+        min-height: 50vh;
+        border-radius: 28px;
+    }
+    
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero p {
+        font-size: 0.85rem;
+    }
+    
+    .explore-btn {
+        padding: 10px 25px;
+        font-size: 0.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .section-title:after {
+        width: 60px;
+        height: 3px;
+    }
+    
+    .slides {
+        height: 250px;
+        gap: 8px;
+    }
+    
+    .content {
+        padding: 10px;
+    }
+    
+    .content h3 {
+        font-size: 0.8rem;
+    }
+    
+    .content p {
+        font-size: 0.6rem;
+    }
+    
+    .story-hero {
+        padding: 1.5rem 1rem;
+        background-attachment: scroll;
+    }
+    
+    .story-hero h2 {
+        font-size: 1.3rem;
+    }
+    
+    .story-hero p {
+        font-size: 0.8rem;
+    }
+    
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .story-card {
+        padding: 1rem;
+    }
+    
+    .story-card .card-icon {
+        font-size: 2rem;
+    }
+    
+    .story-card h3 {
+        font-size: 1rem;
+    }
+    
+    .gallery-list {
+        gap: 1rem;
+    }
+    
+    .gallery-card {
+        flex: 1 1 160px;
+        min-width: 140px;
+    }
+    
+    .img-holder {
+        height: 130px;
+    }
+    
+    .gallery-card h3 {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+    
+    .gallery-card .desc {
+        font-size: 0.6rem;
+    }
+    
+    .map-container {
+        padding: 1rem;
+    }
+    
+    .interactive-map-card {
+        padding: 1.2rem;
+        font-size: 0.8rem;
+    }
+    
+    .inquire-card, .contact-card {
+        padding: 1.2rem;
+        max-width: 100%;
+    }
+    
+    .footer-tag {
+        padding: 1rem;
+        font-size: 0.65rem;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 550px) {
+    .sidebar {
+        padding: 8px 12px;
+    }
+    
+    .real-img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .logo-text {
+        font-size: 0.8rem;
+    }
+    
+    .sidebar nav a {
+        font-size: 0.55rem;
+        padding: 4px 8px;
+    }
+    
+    .hero {
+        padding: 30px 18px;
+        min-height: 45vh;
+    }
+    
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+    
+    .hero p {
+        font-size: 0.75rem;
+    }
+    
+    .slides {
+        height: 180px;
+    }
+    
+    .gallery-card {
+        flex: 1 1 130px;
+        min-width: 120px;
+    }
+    
+    .img-holder {
+        height: 100px;
+    }
+}
+</style>
+<body>
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo-container">
+          <img src="real.png" alt="ELYU Logo" class="real-img">
+            <div class="logo-text">ELYU</div>
+        </div>
+        <nav>
+            <a href="#home">🏠 Home</a>
+            <a href="#history">📖 History</a>
+            <a href="#beaches">🏖️ Top 5 Beaches</a>
+            <a href="#food">🍜 Food</a>
+            <a href="#staycations">🏨 Staycations</a>
+            <a href="#cafes">☕ Cafes</a>
+            <a href="#map">🗺️ Maps</a>
+            <a href="#contact">📞 Contacts</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home">
+            <div class="hero">
+                <h1>Elyu</h1>
+                <p>"Where waves meet serenity and sunsets tell stories."</p>
+                <a href="#history" class="explore-btn">Discover History →</a>
+            </div>
+        </section>
+
+        <!-- HISTORY SECTION -->
+        <section id="history">
+            <h2 class="section-title">The History of La Union</h2>
+            <div class="story-hero">
+                <h2>⚓ A Province Born from Union</h2>
+                <p>Founded in 1850, La Union's name comes from its creation through the union of three provinces</p>
+            </div>
+            <div class="story-grid">
+                <div class="story-card">
+                    <h3>🏛️ Spanish Era</h3>
+                    <p>La Union was officially established on March 2, 1850, by the Spanish colonial government to improve civil administration and defense. Its name literally translates to "the Union,
+                      " symbolizing the merger of the southern towns of Ilocos Sur,
+                       the northern towns of Pangasinan, and the western towns of Benguet.</p>
+                    <span class="info-badge">1850</span>
+                </div>
+                <div class="story-card">
+                    <h3>🌊 Surf Culture</h3>
+                    <p>San Juan became the surfing capital in the 1980s, hosting international competitions yearly.</p>
+                    <span class="info-badge">Since 1980s</span>
+                </div>
+                <div class="story-card">
+                    <h3>🎨 Heritage & Arts</h3>
+                    <p>Home to the famous "Basi" wine, inabel weaving, and the vibrant "Pindang" Festival.</p>
+                    <span class="info-badge">Cultural Hub</span>
+                </div>
+                 <div class="story-card">
+                    <h3>🎨Language</h3>
+                    <p>Language: True to its rich historical melting pot of Ilocano,
+                       Pangasinense, and Cordilleran cultures, 
+                       La Union was notably the first province in the Philippines to declare Ilocano a co-official language.</p>
+                    <span class="info-badge">Cultural Hub</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOP 5 BEACHES -->
+        <section id="beaches">
+            <h2 class="section-title">🏖️ Top 5 Beaches in La Union</h2>
+            <ul class="slides">
+                <li>
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format" alt="San Juan Beach">
+                    <div class="content">
+                        <h3>San Juan Beach</h3>
+                        <p>The Surfing Capital - perfect waves for beginners and pros.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=2070&auto=format" alt="Bauang Beach">
+                    <div class="content">
+                        <h3>Bauang Beach</h3>
+                        <p>Calm waters, great for swimming and beach picnics.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://images.unsplash.com/photo-1535498730771-e735b998cd64?q=80&w=1887&auto=format" alt="Darigayos Cove">
+                    <div class="content">
+                        <h3>Darigayos Cove</h3>
+                        <p>Hidden gem with rock formations and crystal clear water.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://images.unsplash.com/photo-1506953829328-01752d5f2e1e?q=80&w=2071&auto=format" alt="Pebble Beach">
+                    <div class="content">
+                        <h3>Pebble Beach</h3>
+                        <p>Unique pebble shoreline in Santo Domingo.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format" alt="Luna Beach">
+                    <div class="content">
+                        <h3>Luna Beach</h3>
+                        <p>Quiet and peaceful - perfect for morning walks.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- FOOD SECTION -->
+        <section id="food">
+            <h2 class="section-title">🍜 Must-Try Food in La Union</h2>
+            <ul class="gallery-list">
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1562962230-16e4623d36e6?q=80&w=2070&auto=format');"></div>
+                    <h3>Baluarte</h3>
+                    <div class="desc">Grilled meat marinated in native spices</div>
+                </li>
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1887&auto=format');"></div>
+                    <h3>Pindang</h3>
+                    <div class="desc">Salted and dried fish, local breakfast staple</div>
+                </li>
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1887&auto=format');"></div>
+                    <h3>Basi Wine</h3>
+                    <div class="desc">Traditional sugarcane wine</div>
+                </li>
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=2070&auto=format');"></div>
+                    <h3>Inasin</h3>
+                    <div class="desc">Grilled fish with rock salt</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- STAYCATIONS -->
+        <section id="staycations">
+            <h2 class="section-title">🏨 Best Staycations</h2>
+            <ul class="gallery-list">
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format');"></div>
+                    <h3>The Circle Hostel</h3>
+                    <div class="desc">Beachfront with surfing lessons</div>
+                </li>
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1925&auto=format');"></div>
+                    <h3>Aureo Resort</h3>
+                    <div class="desc">Luxury beach resort & spa</div>
+                </li>
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format');"></div>
+                    <h3>San Juan Surf Resort</h3>
+                    <div class="desc">Surf lessons & cozy rooms</div>
+                </li>
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format');"></div>
+                    <h3>Thunderbird Resort</h3>
+                    <div class="desc">Casino, golf, and ocean views</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- CAFES -->
+        <section id="cafes">
+            <h2 class="section-title">☕ Best Cafes in La Union</h2>
+            <ul class="gallery-list">
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2070&auto=format');"></div>
+                    <h3>El Union Coffee</h3>
+                    <div class="desc">Famous dirty horchata & vibes</div>
+                </li>
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=2070&auto=format');"></div>
+                    <h3>Little Yellow House</h3>
+                    <div class="desc">Instagram-worthy desserts</div>
+                </li>
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=2069&auto=format');"></div>
+                    <h3>Great Northwest</h3>
+                    <div class="desc">Best sunset view cafe</div>
+                </li>
+                <li class="gallery-card">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=2070&auto=format');"></div>
+                    <h3>Surftown Cafe</h3>
+                    <div class="desc">Breakfast burritos & cold brew</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- MAPS -->
+        <section id="map">
+            <h2 class="section-title">🗺️ La Union Travel Map</h2>
+            <div class="map-container">
+                <div class="interactive-map-card" onclick="alert('📍 La Union is located in the Ilocos Region, 273 km north of Manila. Key towns: San Juan (Surf Capital), Bauang, Luna, and Bacnotan.')">
+                    🗺️ Click to Explore La Union's Hidden Gems 🌊
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <h2 class="section-title">📞 Contact Us</h2>
+            <div class="contact-card">
+                <h3>La Union Tourism Office</h3>
+                <p>📍 Provincial Capitol, City of San Fernando, La Union</p>
+                <p>📞 (072) 242-5555</p>
+                <p>📧 tourism@launion.gov.ph</p>
+                <button class="btn-small" onclick="alert('📧 Email sent to tourism@launion.gov.ph')">Send Inquiry ✉️</button>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-tag">
+            <p>© 2024 Elyu Tourism | Surf Capital of the Northern Philippines 🌊</p>
+            <p>Experience the waves, culture, and sunsets of La Union</p>
+        </footer>
+    </main>
+
+<script>
+// Functionality for smooth navigation and active link highlighting
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Get all navigation links
+        const navLinks = document.querySelectorAll('.sidebar nav a');
+        
+        // Get all sections
+        const sections = document.querySelectorAll('section');
+        
+        // Function to remove active class from all links
+        function removeActiveClass() {
+            navLinks.forEach(link => {
+                link.style.background = 'rgba(255, 255, 255, 0.06)';
+                link.style.color = 'var(--ocean-mist)';
+                link.style.transform = 'translateX(0)';
+            });
+        }
+        
+        // Function to add active class to current link
+        function addActiveClass(clickedLink) {
+            removeActiveClass();
+            clickedLink.style.background = 'var(--sunset-orange)';
+            clickedLink.style.color = 'white';
+            clickedLink.style.transform = 'translateX(8px)';
+        }
+        
+        // Add click event to each navigation link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Get the target section id from href
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                // Smooth scroll to section
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Add active class to clicked link
+                addActiveClass(this);
+            });
+        });
+        
+        // Highlight active section on scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const scrollPosition = window.scrollY + 150;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').substring(1);
+                if (href === current) {
+                    link.style.background = 'var(--sunset-orange)';
+                    link.style.color = 'white';
+                    link.style.transform = 'translateX(8px)';
+                } else {
+                    link.style.background = 'rgba(255, 255, 255, 0.06)';
+                    link.style.color = 'var(--ocean-mist)';
+                    link.style.transform = 'translateX(0)';
+                }
+            });
+        });
+        
+        // Trigger scroll event on page load to highlight correct section
+        setTimeout(() => {
+            window.dispatchEvent(new Event('scroll'));
+        }, 100);
+    });
+    </script>
+</body>
+</html>
+
