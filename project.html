@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Union | Surf Capital of the Northern Philippines</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+    <!--SIDEBAR-->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <img src="real.jpg" alt="ELYU Logo" class="real-img"
+                 onerror="this.style.display='none'">
+            <div class="logo-text">ELYU</div>
+        </div>
+
+        <nav>
+            <a href="#home">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Home</span>
+            </a>
+            <a href="#history">
+                <span class="nav-icon">📖</span>
+                <span class="nav-label">History</span>
+            </a>
+            <a href="#beaches">
+                <span class="nav-icon">🏖️</span>
+                <span class="nav-label">Top 5 Beaches</span>
+            </a>
+            <a href="#food">
+                <span class="nav-icon">🍜</span>
+                <span class="nav-label">Food</span>
+            </a>
+            <a href="#staycations">
+                <span class="nav-icon">🏨</span>
+                <span class="nav-label">Staycations</span>
+            </a>
+            <a href="#cafes">
+                <span class="nav-icon">☕</span>
+                <span class="nav-label">Cafes</span>
+            </a>
+            <a href="#map">
+                <span class="nav-icon">🗺️</span>
+                <span class="nav-label">Maps</span>
+            </a>
+            <a href="#about">
+                <span class="nav-icon">👥</span>
+                <span class="nav-label">About Us</span>
+            </a>
+            <a href="#contact">
+                <span class="nav-icon">📞</span>
+                <span class="nav-label">Contacts</span>
+            </a>
+        </nav>
+
+        <!-- Sidebar bottom controls -->
+        <div class="sidebar-controls">
+            <!-- Dark Mode Toggle -->
+            <button class="dark-toggle-btn" id="darkToggle" aria-label="Toggle dark mode">
+                <span class="nav-icon" id="darkIcon">🌙</span>
+                <span class="btn-label" id="darkLabel">Dark Mode</span>
+            </button>
+            <!-- Collapse Toggle -->
+            <button class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Toggle sidebar">
+                <span class="nav-icon" id="toggleIcon">◀</span>
+                <span class="btn-label" id="toggleLabel">Collapse</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- ======================================================
+         MAIN CONTENT
+    ====================================================== -->
+    <main id="main">
+
+        <!-- HERO SECTION -->
+        <section id="home">
+            <div class="hero">
+                <h1>Elyu</h1>
+                <p>"Where waves meet serenity and sunsets tell stories."</p>
+                <a href="#history" class="explore-btn">Discover History →</a>
+            </div>
+        </section>
+
+        <!-- HISTORY SECTION -->
+        <section id="history">
+            <h2 class="section-title">The History of La Union</h2>
+            <div class="story-hero">
+                <h2>⚓ A Province Born from Union</h2>
+                <p>Founded in 1850, La Union's name comes from its creation through the union of three provinces.</p>
+            </div>
+            <div class="story-grid">
+                <div class="story-card">
+                    <h3>🏛️ Spanish Era</h3>
+                    <p>La Union was officially established on March 2, 1850, by the Spanish colonial government. Its name literally translates to "the Union," symbolizing the merger of the southern towns of Ilocos Sur, northern towns of Pangasinan, and western towns of Benguet.</p>
+                    <span class="info-badge">1850</span>
+                </div>
+                <div class="story-card">
+                    <h3>🌊 Surf Culture</h3>
+                    <p>San Juan became the surfing capital in the 1980s, hosting international competitions yearly and drawing surfers from around the world to its legendary breaks.</p>
+                    <span class="info-badge">Since 1980s</span>
+                </div>
+                <div class="story-card">
+                    <h3>🎨 Heritage & Arts</h3>
+                    <p>Home to the famous "Basi" wine, inabel weaving, and the vibrant "Pindang" Festival — a rich cultural tapestry woven through centuries of tradition.</p>
+                    <span class="info-badge">Cultural Hub</span>
+                </div>
+                <div class="story-card">
+                    <h3>🗣️ Language</h3>
+                    <p>True to its rich historical melting pot of Ilocano, Pangasinense, and Cordilleran cultures, La Union was the first province in the Philippines to declare Ilocano a co-official language.</p>
+                    <span class="info-badge">Cultural Hub</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOP 5 BEACHES -->
+        <section id="beaches">
+            <h2 class="section-title">🏖️ Top 5 Beaches in La Union</h2>
+            <ul class="slides">
+                <li data-info="beaches" data-index="0">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format" alt="San Juan Beach">
+                    <div class="content">
+                        <h3>San Juan Beach</h3>
+                        <p>The Surfing Capital — perfect waves for beginners and pros.</p>
+                    </div>
+                    <button class="info-trigger" aria-label="More info">ℹ</button>
+                </li>
+                <li data-info="beaches" data-index="1">
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=2070&auto=format" alt="Bauang Beach">
+                    <div class="content">
+                        <h3>Bauang Beach</h3>
+                        <p>Calm waters, great for swimming and beach picnics.</p>
+                    </div>
+                    <button class="info-trigger" aria-label="More info">ℹ</button>
+                </li>
+                <li data-info="beaches" data-index="2">
+                    <img src="https://images.unsplash.com/photo-1535498730771-e735b998cd64?q=80&w=1887&auto=format" alt="Darigayos Cove">
+                    <div class="content">
+                        <h3>Darigayos Cove</h3>
+                        <p>Hidden gem with rock formations and crystal clear water.</p>
+                    </div>
+                    <button class="info-trigger" aria-label="More info">ℹ</button>
+                </li>
+                <li data-info="beaches" data-index="3">
+                    <img src="https://images.unsplash.com/photo-1506953829328-01752d5f2e1e?q=80&w=2071&auto=format" alt="Pebble Beach">
+                    <div class="content">
+                        <h3>Pebble Beach</h3>
+                        <p>Unique pebble shoreline in Santo Domingo.</p>
+                    </div>
+                    <button class="info-trigger" aria-label="More info">ℹ</button>
+                </li>
+                <li data-info="beaches" data-index="4">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format" alt="Luna Beach">
+                    <div class="content">
+                        <h3>Luna Beach</h3>
+                        <p>Quiet and peaceful — perfect for morning walks.</p>
+                    </div>
+                    <button class="info-trigger" aria-label="More info">ℹ</button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- FOOD SECTION -->
+        <section id="food">
+            <h2 class="section-title">🍜 Must-Try Food in La Union</h2>
+            <ul class="gallery-list">
+                <li class="gallery-card" data-info="food" data-index="0">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1562962230-16e4623d36e6?q=80&w=2070&auto=format');"></div>
+                    <h3>Baluarte</h3>
+                    <div class="desc">Grilled meat marinated in native spices</div>
+                </li>
+                <li class="gallery-card" data-info="food" data-index="1">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1887&auto=format');"></div>
+                    <h3>Pindang</h3>
+                    <div class="desc">Salted and dried fish, local breakfast staple</div>
+                </li>
+                <li class="gallery-card" data-info="food" data-index="2">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1887&auto=format');"></div>
+                    <h3>Basi Wine</h3>
+                    <div class="desc">Traditional sugarcane wine</div>
+                </li>
+                <li class="gallery-card" data-info="food" data-index="3">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=2070&auto=format');"></div>
+                    <h3>Inasin</h3>
+                    <div class="desc">Grilled fish with rock salt</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- STAYCATIONS -->
+        <section id="staycations">
+            <h2 class="section-title">🏨 Best Staycations</h2>
+            <ul class="gallery-list">
+                <li class="gallery-card" data-info="stays" data-index="0">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format');"></div>
+                    <h3>The Circle Hostel</h3>
+                    <div class="desc">Beachfront with surfing lessons</div>
+                </li>
+                <li class="gallery-card" data-info="stays" data-index="1">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1925&auto=format');"></div>
+                    <h3>Aureo Resort</h3>
+                    <div class="desc">Luxury beach resort & spa</div>
+                </li>
+                <li class="gallery-card" data-info="stays" data-index="2">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2070&auto=format');"></div>
+                    <h3>San Juan Surf Resort</h3>
+                    <div class="desc">Surf lessons & cozy rooms</div>
+                </li>
+                <li class="gallery-card" data-info="stays" data-index="3">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format');"></div>
+                    <h3>Thunderbird Resort</h3>
+                    <div class="desc">Casino, golf, and ocean views</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- CAFES -->
+        <section id="cafes">
+            <h2 class="section-title">☕ Best Cafes in La Union</h2>
+            <ul class="gallery-list">
+                <li class="gallery-card" data-info="cafes" data-index="0">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2070&auto=format');"></div>
+                    <h3>El Union Coffee</h3>
+                    <div class="desc">Famous dirty horchata & vibes</div>
+                </li>
+                <li class="gallery-card" data-info="cafes" data-index="1">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=2070&auto=format');"></div>
+                    <h3>Little Yellow House</h3>
+                    <div class="desc">Instagram-worthy desserts</div>
+                </li>
+                <li class="gallery-card" data-info="cafes" data-index="2">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=2069&auto=format');"></div>
+                    <h3>Great Northwest</h3>
+                    <div class="desc">Best sunset view cafe</div>
+                </li>
+                <li class="gallery-card" data-info="cafes" data-index="3">
+                    <div class="img-holder" style="background-image: url('https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=2070&auto=format');"></div>
+                    <h3>Surftown Cafe</h3>
+                    <div class="desc">Breakfast burritos & cold brew</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ABOUT US -->
+        <section id="about">
+            <h2 class="section-title">👥 About Us</h2>
+            <div class="team-carousel-wrapper">
+                <div class="team-track" id="teamTrack">
+                    <!-- Cards rendered by JS -->
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn" aria-label="Previous">◀</button>
+                <div class="carousel-dots" id="carouselDots"></div>
+                <button class="carousel-btn" id="nextBtn" aria-label="Next">▶</button>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <h2 class="section-title">📞 Contact Us</h2>
+            <div class="contact-card">
+                <h3>La Union Tourism Office</h3>
+                <p>📍 Provincial Capitol, City of San Fernando, La Union</p>
+                <p>📞 (072) 242-5555</p>
+                <p>📧 tourism@launion.gov.ph</p>
+                <button class="btn-small" onclick="alert('📧 Message sent to tourism@launion.gov.ph!')">Send Inquiry ✉️</button>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-tag">
+            <p>© 2024 Elyu Tourism | Surf Capital of the Northern Philippines 🌊</p>
+            <p>Experience the waves, culture, and sunsets of La Union</p>
+        </footer>
+    </main>
+
+    <!-- INFO MODAL-->
+    <div class="modal-overlay" id="infoModal" role="dialog" aria-modal="true" aria-label="Info panel">
+        <div class="modal-panel" id="modalPanel">
+            <button class="modal-close-btn" id="modalClose" aria-label="Close">✕</button>
+            <div class="modal-banner" id="modalBanner"></div>
+            <div class="modal-body">
+                <div class="modal-category" id="modalCategory"></div>
+                <div class="modal-title" id="modalTitle"></div>
+                <div class="modal-location" id="modalLocation"></div>
+                <div class="modal-desc" id="modalDesc"></div>
+                <div class="modal-facts" id="modalFacts"></div>
+                <div class="modal-rating" id="modalRating"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>
